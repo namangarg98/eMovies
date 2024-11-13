@@ -26,7 +26,7 @@ export const Header = () => {
     event.preventDefault();
     const queryTerm = event.target.search.value;
     event.target.reset();
-    return navigate(`/search?q=${queryTerm}`);
+    return navigate(`/search?t=${queryTerm}`);
   }
 
   return (
@@ -72,16 +72,16 @@ export const Header = () => {
               </div>
               <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  <NavLink to="/" className={({isActive}) => isActive ? activeClass : inActiveClass } end>Home</NavLink>
+                  <NavLink to="/" className={({isActive}) => isActive ? activeClass : inActiveClass } end>Comedy</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/movies/popular" className={({isActive}) => isActive ? activeClass : inActiveClass }>Popular</NavLink>
+                  <NavLink to="/movies/action" className={({isActive}) => isActive ? activeClass : inActiveClass }>Action</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/movies/top" className={({isActive}) => isActive ? activeClass : inActiveClass }>Top Rated</NavLink>
+                  <NavLink to="/movies/drama" className={({isActive}) => isActive ? activeClass : inActiveClass }>Drama</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/movies/upcoming" className={({isActive}) => isActive ? activeClass : inActiveClass }>Upcoming</NavLink>
+                  <NavLink to="/movies/thriller" className={({isActive}) => isActive ? activeClass : inActiveClass }>Thriller</NavLink>
                 </li>
               </ul>
             </div>
