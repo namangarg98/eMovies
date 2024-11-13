@@ -17,7 +17,7 @@ export const MovieDetail = () => {
   useEffect(() => {
     async function fetchMovie(){
       setLoading(true);
-      const response = await fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${params.id}&plot=short`);
+      const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${params.id}&plot=short`);
       const json = await response.json()
       setMovie(json);
       setLoading(false);
